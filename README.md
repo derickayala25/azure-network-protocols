@@ -32,26 +32,40 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
+<b>Create a Resource Group in Azure</b>
+
+1. In Azure, create a Resource Group by clicking on <b>Resource Groups</b> and then <b>+ Create</b>.
+2. Make a note of the <b>Region</b> (you'll need it later). Name the resource group <em>Network-Activities</em>. Click on the blue `Review + Create` button at the bottom.
+
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+<img src="https://github.com/user-attachments/assets/4ed7b0e5-a2c6-43d0-aa48-ffcbcbe42bf0" height="80%" width="80%" alt="Create Resource Group"/>
+</p></br>
+
+
+<b>Create a Windows 10 Virtual Machine (VM)</b>
+
+1. In Azure, navigate to "virtual machines". Click on the <b>+ Create</b> tab and select <b>Azure virtual machine</b>.
+2. Make sure the resource group is <em>Network-Activities</em>. Name the VM <b>Windows-vm</b> and make sure the selected Region is the same as the Resource Group's.
+3. For <b>Image</b> select <b>Windows 10 Pro, version 22H2</b>. For size, select a size that has at least 2 vcpus.
+4. Create a username and password. Click `Next` until you get to the <b>Networking</b> section.
+5. In the <b>Networking</b> section, make sure the <b>Virtual network</b> is <em>Active-Directory-VNet</em>.
+6. Click on the blue `Review + Create` button and then `Create`.
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+</p></br>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
