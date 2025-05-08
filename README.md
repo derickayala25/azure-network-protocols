@@ -42,20 +42,23 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p></br>
 
 
-<b>Create a Windows 10 Virtual Machine (VM)</b>
+<b>Create a Windows 10 and a Linux virtual machine (vm)</b>
 
 1. In Azure, navigate to "virtual machines". Click on the <b>+ Create</b> tab and select <b>Azure virtual machine</b>.
-2. Make sure the resource group is <em>Network-Activities</em>. Name the VM <b>Windows-vm</b> and make sure the selected Region is the same as the Resource Group's.
+2. Name the resource group is <em>Network-Activities</em>. Name the VM <b>Windows-vm</b> and make sure the selected Region is the same as the Resource Group's.
 3. For <b>Image</b> select <b>Windows 10 Pro, version 22H2</b>. For size, select a size that has at least 2 vcpus.
 4. Create a username and password. Click `Next` until you get to the <b>Networking</b> section.
-5. In the <b>Networking</b> section, make sure the <b>Virtual network</b> is <em>Active-Directory-VNet</em>.
+5. In the <b>Networking</b> section, allow it to create a new Virtual Network (Vnet) and Subnet
 6. Click on the blue `Review + Create` button and then `Create`.
+7. Once you've created your Windows VM, now we'll create a Linux VM. To start, repeat step 1.
+8. Select the same resource group as the Window's VM and name the new VM <b>Linux-VM</b>.
+9. For image, select <b>Ubuntu Server 22.04</b> and select a size that has at least 2 vcpus.
+10. Use the same username and password as the Windows VM and in the <b>Networking</b> section, select the same network as the Windows VM.
+11. Click on the blue `Review + Create` button and then `Create`.
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://github.com/user-attachments/assets/58cacfe4-61bf-4dbf-af6d-5cdd25fab2a" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
-
-
 
 
 
