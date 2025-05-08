@@ -72,14 +72,22 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p></br>
 
 
+<b>Install Wireshark</b>
 
+Wireshark is a network protocol analyzer used to capture, inspect, and analyze data packets traveling over a network in real time. It lets users see detailed information about each packet, such as source and destination IP addresses, protocol types (e.g., TCP, UDP, HTTP), and the actual data payload.
 
+1. Open the Edge browser and type www.wireshark.org in the address bar. Press Enter.
+2. Click on the <b>Download</b> button and select <b>Windows x64 Installer</b>
+3. Once downloaded, open the file. You can minimize Edge.
+4. Click `Next` throughout the installation process. When you get to the section where it says <b>Install Npcap 1.79</b> make sure that the checkbox is checked.
+5. Click `Install`. It will download a few files and then you'll have to agree to some terms and click `Install` again.
 
+<p>
+<img src="https://github.com/user-attachments/assets/631147d9-c26a-44a7-8b8c-d536ef317e3f" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
-
-
-
-
-
+<p>
+<img src="https://github.com/user-attachments/assets/79daeb55-34c7-4114-bd4d-9de17b1df388" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
 
