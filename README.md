@@ -57,7 +57,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 11. Click on the blue `Review + Create` button and then `Create`.
 
 <p>
-<img src="https://github.com/user-attachments/assets/58cacfe4-61bf-4dbf-af6d-5cdd25fab2a" height="80%" width="80%" alt="Create VM's"/>
+<img src="https://github.com/user-attachments/assets/ba98d46e-ed87-419e-8505-d526ae5377ee" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
 
 
