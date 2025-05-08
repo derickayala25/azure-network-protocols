@@ -61,6 +61,17 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p></br>
 
 
+<b>Use Remote Desktop to connect to your Windows 10 Virtual Machine</b>
+
+1. Type <em>mstsc</em> in your Windows search bar and select <b>Remote Desktop Connection</b>
+2. Copy and paste the Windows VM Public IP address and click `Connect`
+3. Type in your username and password and click `OK`
+
+<p>
+<img src="https://github.com/user-attachments/assets/e79dc1b8-6286-41dd-bfec-377ed61968af" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
 
 
 
