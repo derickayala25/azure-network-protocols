@@ -91,3 +91,11 @@ Wireshark is a network protocol analyzer used to capture, inspect, and analyze d
 </p></br>
 
 
+<b>Open Wireshark and Start Packet Capture</b>
+
+A packet capture in Wireshark helps you look closely at all the little pieces of data traveling on a network. This helps if you're investigating security threats or searching for the root cause of network or performance issues.
+
+
+
+
+
