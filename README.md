@@ -146,16 +146,28 @@ While still isolating ICMP traffic, ping <b>Google</b> by typing <em>www.google.
 Now, we will configure a firewall for the Linux VM by going into its Network Security Group and adding an inbound security rule. This will stop ICMP traffic from the Windows VM.
 First we will initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM.
 
-1. In the Windows VM, open <b>Powershell</b> and type <em>ping 10.0.0.5 -t</em>. In this case <em>10.0.0.5</em> is the Linux VM's Private IP address and `-t` makes the ping run continuously until you manually stop it (Ctrl+C).
+1. In the Windows VM, open <b>Powershell</b>, type <em>ping 10.0.0.5 -t</em> and press <b>Enter</b>. In this case <em>10.0.0.5</em> is the Linux VM's Private IP address and the `-t` flag makes the ping run continuously until you manually stop it (Ctrl+C).
+2. In Wireshark, after isolating for ICMP traffic, you will see that there will be continuous traffic between the Windows VM (10.0.0.4) and the Linux VM (10.0.0.5)
 
 
+<p>
+<img src="https://github.com/user-attachments/assets/0fd5dc75-9eaa-4dd4-b85a-ddba7f84e602" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
+<p>
+<img src="https://github.com/user-attachments/assets/9009e5af-5d32-480e-a8cc-a6e2f261f4f7" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
+<b>Now, we will configure an inbound security rule in the Linux VM that will block requests from the Windows VM</b>
 
-
-
-
-
+1. Go to the Azure portal and click on  <b>Virtual machines</b>. Click on the Linux VM name. On the left side-panel expand <b>Networking</b> and click on <b>Network settings</b>.
+2. In the <b>Network settings</b> window, go to the <b>Network security gr...</b> line and click on the name link (it will end with <em>-nsg</em>). This will open a window with the Network security group name.
+3. Once there, go to <b>Settings</b> on the left side-panel, click on <b>Inbound security rules</b>, and click on the <b>+ Add</b> symbol at the top.
+4. Another window will open on the right side. In the <b>Destination port ranges</b> box type an asterisk. This stands for “any”.
+5. In the <b>Protocol</b> section select <b>ICMPv4</b>
+6. In the <b>Action</b> section select <b>Deny</b>
+7. In the <b>Priority</b> box, type <em>290</em>. This will put the rule as the highest priority, therefore, the first to evaluate when the ping happens.
+8. Clicl `Add` at the bottom
 
 
 
