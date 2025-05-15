@@ -257,8 +257,26 @@ Now we will remote into the Linux VM via PowerShell in the Windows VM
 <img src="https://github.com/user-attachments/assets/9d7fd885-c049-43ac-a41d-2bf2a7701f03" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
 
+<b>Type commands (username, pwd, etc) into the Linux SSH connection and observe SSH traffic spam in WireShark</b>
+
+1. Type <em>id</em>. This will display your username plus other information. The <b>id</b> command displays user identity information, including the user ID (UID), group ID (GID), and all groups the user belongs to, including secondary groups
+
+<p>
+<img src="https://github.com/user-attachments/assets/39bf4b7d-16f4-44fb-bc96-dbed19b153bc" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
 
+
+
+
+
+a2 - Type hostname. This will give you the name of the linux vm. The “hostname” command displays the name of the current host system, which is the name used to identify the machine on a network. 
+a3 - Type uname -a. This command prints system information. Note however that this command is native to Unix-based operating systems, and it provides detailed information about the system's kernel and architecture. In Windows PowerShell, the uname -a command does not work as it does in Unix-like systems (Linux, macOS). In PowerShell on Windows, running uname -a will result in an error because that command isn't recognized.
+Since we're connected to the linux vm, this command will give us information
+a4 - Type pwd. The pwd command in Linux displays the full, absolute path of your current working directory, starting from the root directory (/). Note however that this command in Unix-like systems stands for "print working directory," and it shows the current directory you're in. In PowerShell, pwd is actually an alias for the Get-Location cmdlet, which shows the current directory or "working directory." 
+a5 - Type touch file.txt. In Unix-like systems, the touch command is used to create an empty file or update the timestamp of an existing file. However, in Windows PowerShell, touch is not a built-in command. In this case it creates a text file in the linux vm.
+a6 - Type ls. In a Linux environment, the ls command is used to list the contents of a directory. It displays files and subdirectories within the directory you're currently in (or a specified directory). In this case it will show you the file.txt file.
+a7 - Go back to Wireshark and remove the ssh filter. If you type tcp.port==22, it will do the same as typing ssh as ssh runs through port 22.
 
 
 
