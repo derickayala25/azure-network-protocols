@@ -349,16 +349,27 @@ DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign Interne
 <img src="https://github.com/user-attachments/assets/161b238f-e1df-49f8-b427-66dec124d218" height="80%" width="80%" alt="Create VM's"/>
 </p>
 
+5. Run the bat file by typing <em>.\dhcp.bat</em> and pressing <b>Enter</b>. This will release (disconnect) the IP address (therefore disconnecting your remote desktop connection) but immediately will issue a new Private IP address (probably the same one), thereby reestablishing the connection to the remote desktop.
 
+<p>
+<img src="https://github.com/user-attachments/assets/389c52d7-7fcd-457b-a9b0-91f2b3f858d8" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
+<p>
+<img src="https://github.com/user-attachments/assets/41c8b2fa-5337-4768-b610-2e09f4af2816" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
+6. Observe the DHCP traffic in Wireshark. The <b>ipconfig \release</b> command in the BAT file gave us the <b>Release</b> line in Wireshark. The <b>ipconfig \renew</b> command that followed immediately gave us the <b>Discover</b>, <b>Offer</b>, <b>Request</b> and <b>ACK</b> (acknowledgment) lines.
 
-a4 - In Powershell, type cd (which means change directory) c:\programdata, It will look like this 
-cd c:\programdata. This will change the prompt to C:\programdata. 
-a5 - Type ls (stands for list) and hit Enter. This will give you a list of the files in the Program Data folder. Here you will see your newly create dhcp.bat file.
-a6 - Run the bat file by typing .\dhcp.bat and hitting Enter.
-a7 - This will release (disconnect) the ip address, therefore disconnecting your remote desktop connection, but immediately issue a new ip address (probably the same ip address) thereby reestablishing the connection to the remote desktop.
+<p>
+<img src="https://github.com/user-attachments/assets/8c65ac67-7896-497c-b4d6-d8520a5d91e4" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
+7. Type <em>ipconfig</em> In PowerShell to display the network configuration details for your system
+
+<p>
+<img src="https://github.com/user-attachments/assets/9d6bafd8-1863-406b-afa3-8e768dae7801" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
 
 
