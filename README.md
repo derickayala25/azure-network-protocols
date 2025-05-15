@@ -139,7 +139,30 @@ While still isolating ICMP traffic, ping <b>Google</b> by typing <em>www.google.
 
 <p>
 <img src="https://github.com/user-attachments/assets/c2c70506-1dd4-4864-bccc-62f311befad5" height="80%" width="80%" alt="Create VM's"/>
-</p>
+</p></br>
+
+<b>Configuring a Firewall [Network Security Group]</b>
+
+Now, we will configure a firewall for the Linux VM by going into its Network Security Group and adding an inbound security rule. This will stop ICMP traffic from the Windows VM.
+First we will initiate a perpetual/non-stop ping from your Windows 10 VM to your Ubuntu VM.
+
+1. In the Windows VM, open <b>Powershell</b> and type <em>ping 10.0.0.5 -t</em>. In this case <em>10.0.0.5</em> is the Linux VM's Private IP address and `-t` makes the ping run continuously until you manually stop it (Ctrl+C).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
