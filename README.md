@@ -314,7 +314,43 @@ Now we'll enter a few commands to get more information about the Linux VM
 
 <p>
 <img src="https://github.com/user-attachments/assets/928de481-c660-4ef4-b29e-8258ec5e5574" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+<b>Filter for DHCP  traffic only</b>
+
+DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign Internet Protocol (IP) addresses to each host on a network.
+
+1. Back in Wireshark, filter for DHCP traffic only. You shouldn't see any traffic.
+
+<p>
+<img src="https://github.com/user-attachments/assets/9e7025fa-2c33-45a0-b5a5-fced120ec8f7" height="80%" width="80%" alt="Create VM's"/>
 </p>
+
+
+<b>From your Windows VM, attempt to issue your VM a new IP address from the command line</b>
+
+1. Open PowerShell as an Administrator. We will need to create a BAT (short for Batch) file and save it in c:\programdata.
+2. Open <b>Notepad</b>. Type <em>ipconfig /release</em> and press <b>Enter</b>. On the next line type <em>ipconfig /renew</em>. Click on <b>File</b> > <b>Save As</b>. In the <b>Save as type:</b> area select <b>All Files</b>.  Name the file <em>dhcp.bat</em>. This BAT file is a script that will be executed by the Windows Command Prompt (cmd.exe). Finally, enter “c:\programdata” in the address bar in order to save it in the <b>Program Data</b> folder. Click `Save`.
+
+<p>
+<img src="https://github.com/user-attachments/assets/84b563d5-0431-475d-8cf9-c2fbb769fef4" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+
+
+a4 - In Powershell, type cd (which means change directory) c:\programdata, It will look like this 
+cd c:\programdata. This will change the prompt to C:\programdata.
+a5 - Type ls (stands for list) and hit Enter. This will give you a list of the files in the Program Data folder. Here you will see your newly create dhcp.bat file.
+a6 - Run the bat file by typing .\dhcp.bat and hitting Enter.
+a7 - This will release (disconnect) the ip address, therefore disconnecting your remote desktop connection, but immediately issue a new ip address (probably the same ip address) thereby reestablishing the connection to the remote desktop.
+
+
+
+
+
+
+
 
 
 
