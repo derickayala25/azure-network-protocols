@@ -126,15 +126,20 @@ A packet capture in Wireshark helps you look closely at all the little pieces of
 
 <p>
 <img src="https://github.com/user-attachments/assets/679a78eb-1ade-4788-a148-710d7d73361b" height="80%" width="80%" alt="Create VM's"/>
-</p></br>
+</p>
 
 Note that due to all the traffic, you need to isolate the ICMP traffic in order to see it 
 
+While still isolating ICMP traffic, ping <b>Google</b> by typing <em>www.google.com</em> in Powershell. You'll see the traffic in Wireshark. This is because ICMP operates at the <b>Network Layer</b> of the <b>OSI (Open Systems Interconnection) model</b>, alongside <b>IP (Internet Protocol)</b>. 
 
 
+<p>
+<img src="https://github.com/user-attachments/assets/96d9641e-d17d-4113-a4c2-c2f382007226" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
-
-
+<p>
+<img src="https://github.com/user-attachments/assets/c2c70506-1dd4-4864-bccc-62f311befad5" height="80%" width="80%" alt="Create VM's"/>
+</p>
 
 
 
