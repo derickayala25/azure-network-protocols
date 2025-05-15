@@ -331,11 +331,18 @@ DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign Interne
 <b>From your Windows VM, attempt to issue your VM a new IP address from the command line</b>
 
 1. Open PowerShell as an Administrator. We will need to create a BAT (short for Batch) file and save it in c:\programdata.
-2. Open <b>Notepad</b>. Type <em>ipconfig /release</em> and press <b>Enter</b>. On the next line type <em>ipconfig /renew</em>. Click on <b>File</b> > <b>Save As</b>. In the <b>Save as type:</b> area select <b>All Files</b>.  Name the file <em>dhcp.bat</em>. This BAT file is a script that will be executed by the Windows Command Prompt (cmd.exe). Finally, enter “c:\programdata” in the address bar in order to save it in the <b>Program Data</b> folder. Click `Save`.
+2. Open <b>Notepad</b>. Type <em>ipconfig /release</em> and press <b>Enter</b>. On the next line type <em>ipconfig /renew</em>. Click on <b>File</b> > <b>Save As</b>. In the <b>Save as type:</b> area select <b>All Files</b>.  Name the file <em>dhcp.bat</em>. This BAT file is a script that will be executed by the Windows Command Prompt (cmd.exe). Finally, enter “c:\programdata” in the address bar in order to save it in the <b>Program Data</b> folder. Click `Save`. You can close the Notepad file.
 
 <p>
 <img src="https://github.com/user-attachments/assets/84b563d5-0431-475d-8cf9-c2fbb769fef4" height="80%" width="80%" alt="Create VM's"/>
 </p>
+
+3. Back in PowerShell, we'll change directory by typing <em>cd c:\programdata</em>. This will change the prompt to <b>C:\programdata</b>.
+
+<p>
+<img src="https://github.com/user-attachments/assets/5a8a3661-420c-4b7f-a351-8929307dc22b" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
 
 
 
