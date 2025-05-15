@@ -118,7 +118,7 @@ A packet capture in Wireshark helps you look closely at all the little pieces of
 
 1. Go to the Azure portal on your actual computer, click on the Linux virtual machine's name and copy the Private IP address. In this case it's <em>10.0.0.5</em>
 2. Open PowerShell on your Windows VM and type, for this example, <em>ping 10.0.0.5</em>. Note that the Linux VM has to be running, but you don't have to have remoted into it.
-3. Observe the ping data in Powershell as well as the isolated icmp traffic in Wireshark
+3. Observe the ping data in Powershell as well as the isolated ICMP traffic in Wireshark
 
 <p>
 <img src="https://github.com/user-attachments/assets/990abae6-b856-4a18-ad83-93814eca7c1d" height="80%" width="80%" alt="Create VM's"/>
@@ -128,7 +128,7 @@ A packet capture in Wireshark helps you look closely at all the little pieces of
 <img src="https://github.com/user-attachments/assets/679a78eb-1ade-4788-a148-710d7d73361b" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
 
-4. Due to all the traffic, you need to isolate the ICMP traffic in order to see it 
+Note that due to all the traffic, you need to isolate the ICMP traffic in order to see it 
 
 
 
