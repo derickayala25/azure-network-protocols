@@ -189,11 +189,43 @@ Once the rule takes effect, all Powershell ping activity will say <b>Request tim
 <b>Re-enable ICMP traffic for the Linux VM</b>
 
 For this, you can just delete the rule you created that disabled incoming ICMP traffic.
-1. Go to the Inbound security rules section of your Linux VM (Home > Virtual machines > Linux-VM > Networking > Network settings -> Network security group <em>link</em>)
+1. Go to the Inbound security rules section of your Linux VM (<b>Home</b> > <b>Virtual machines</b> > <b>Linux-VM</b> > <b>Networking</b> > <b>Network settings</b> > <b>Network security group</b> <em>link</em>)
 2. Locate the security rule that was created and click on the trash can symbol at the end in order to delete the rule. Click `Yes` to confirm.
 
 <p>
 <img src="https://github.com/user-attachments/assets/0d635b0a-e6c1-4bc2-9c42-614f49c07ec3" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+<b>Back in the Windows VM, observe the Powershell ping activity and the ICMP traffic in Wireshark</b>
+
+The Powershell ping activity will resume and the ICMP traffic in Wireshark will initiate the request and reply sequence.
+
+<p>
+<img src="https://github.com/user-attachments/assets/5bda7f17-5648-4d0c-8c13-c6bfcf5f835a" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/f6fdf95d-a1dc-48fc-a8fb-7f38e6d28458" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+<b>Stop the ping activity</b>
+
+To do this, press <b>Ctrl+C</b>. Control+C is a general-purpose way to interrupt or terminate a running process in most command-line environments.
+
+<p>
+<img src="https://github.com/user-attachments/assets/ec6a7870-5db4-4ca4-8033-3529aea9b15b" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/207a8f38-0437-483a-a98c-ed2b4a0b2868" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+Click on the red square (stop) button in Wireshark. Click on the blue shark fin under <b>File</b> and select `Continue without Saving`. This will clear the packet capture, and with the icmp filter, will clear all traffic.
+
+<p>
+<img src="https://github.com/user-attachments/assets/8376ab51-8db9-4e7a-9326-57d8804e32c4" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
 
 
