@@ -15,7 +15,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Various Command-Line Tools
-- Various Network Protocols (SSH, RDH, DNS, HTTP/S, ICMP)
+- Various Network Protocols (ICMP, SSH, DHCP, DNS, RDP)
 - Wireshark (Protocol Analyzer)
 
 <h2>Operating Systems Used </h2>
@@ -25,10 +25,13 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+- Create a Resource Group and Virtual Machines
+- Install Wireshark
+- ICMP Traffic
+- SSH Traffic
+- DHCP Traffic
+- DNS Traffic
+- RDP Traffic
 
 <h2>Actions and Observations</h2>
 
@@ -227,6 +230,36 @@ Click on the red square (stop) button in Wireshark. Click on the blue shark fin 
 <p>
 <img src="https://github.com/user-attachments/assets/8376ab51-8db9-4e7a-9326-57d8804e32c4" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
+
+<b>Filter for SSH (Secure Shell or Secure Socket Shell) traffic only</b>
+
+SSH is a cryptographic network protocol used for secure communication over an unsecured network
+1. Back in Wireshark, filter for SSH traffic only. You shouldn't see any traffic.
+
+<p>
+<img src="https://github.com/user-attachments/assets/a4798a4f-ceef-4516-992c-13ad7d6762d3" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+<b>Secure Remote Access into the Linux VM</b>
+
+Now we will remote into the Linux VM via PowerShell in the Windows VM
+
+1. Open PowerShell as an Administrator and type: ssh your username@private IP address for linux vm. In this case it's <em>ssh azurevmuser25@10.0.0.5</em>. Press <b>Enter</b>. You will see traffic in Wireshark.
+2. When asked <b>Are you sure you want to continue connecting (yes/no/[fingerprint])?</b> type <em>yes</em> and press <b>Enter</b>. You will see additional traffic in Wireshark.
+3. Enter the Linux VM password. Note, however, that due to security reasons you won't be able to see the password as you're entering it. Your prompt will change and now you're inside the Linux VM.
+
+
+<p>
+<img src="https://github.com/user-attachments/assets/3521957b-d6d2-4e05-bb77-081b77928852" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/9d7fd885-c049-43ac-a41d-2bf2a7701f03" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+
+
 
 
 
