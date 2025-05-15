@@ -343,11 +343,18 @@ DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign Interne
 <img src="https://github.com/user-attachments/assets/5a8a3661-420c-4b7f-a351-8929307dc22b" height="80%" width="80%" alt="Create VM's"/>
 </p>
 
+4. Type <em>ls</em> (stands for <b>list</b>) and press <b>Enter</b>. This will give you a list of the files in the Program Data folder. Here you will see your newly create dhcp.bat file.
+
+<p>
+<img src="https://github.com/user-attachments/assets/161b238f-e1df-49f8-b427-66dec124d218" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+
 
 
 
 a4 - In Powershell, type cd (which means change directory) c:\programdata, It will look like this 
-cd c:\programdata. This will change the prompt to C:\programdata.
+cd c:\programdata. This will change the prompt to C:\programdata. 
 a5 - Type ls (stands for list) and hit Enter. This will give you a list of the files in the Program Data folder. Here you will see your newly create dhcp.bat file.
 a6 - Run the bat file by typing .\dhcp.bat and hitting Enter.
 a7 - This will release (disconnect) the ip address, therefore disconnecting your remote desktop connection, but immediately issue a new ip address (probably the same ip address) thereby reestablishing the connection to the remote desktop.
