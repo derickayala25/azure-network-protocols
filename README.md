@@ -167,13 +167,34 @@ First we will initiate a perpetual/non-stop ping from your Windows 10 VM to your
 5. In the <b>Protocol</b> section select <b>ICMPv4</b>
 6. In the <b>Action</b> section select <b>Deny</b>
 7. In the <b>Priority</b> box, type <em>290</em>. This will put the rule as the highest priority, therefore, the first to evaluate when the ping happens.
-8. Clicl `Add` at the bottom
+8. Click `Add` at the bottom
+
+<p>
+<img src="https://github.com/user-attachments/assets/cf41c88f-5a31-4301-b373-5bb4b8d41edb" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+<b>Back in the Windows VM, observe the PowerShell ping activity and the ICMP traffic in WireShark</b>
+
+Once the rule takes effect, all Powershell ping activity will say <b>Request timed out</b> and all ICMP traffic in Wireshark will appear as request, without a reply.
+
+<p>
+<img src="https://github.com/user-attachments/assets/49bc50c3-fd51-4a24-ac7b-63cc10602099" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/6bc60cc4-c043-417a-a05d-5d9199a13b0f" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
 
+<b>Re-enable ICMP traffic for the Linux VM</b>
 
+For this, you can just delete the rule you created that disabled incoming ICMP traffic.
+1. Go to the Inbound security rules section of your Linux VM (Home > Virtual machines > Linux-VM > Networking > Network settings -> Network security group <em>link</em>)
+2. Locate the security rule that was created and click on the trash can symbol at the end in order to delete the rule. Click `Yes` to confirm.
 
-
-
+<p>
+<img src="https://github.com/user-attachments/assets/0d635b0a-e6c1-4bc2-9c42-614f49c07ec3" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
 
 
