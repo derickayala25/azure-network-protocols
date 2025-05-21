@@ -369,7 +369,55 @@ DHCP (Dynamic Host Configuration Protocol) is used to dynamically assign Interne
 
 <p>
 <img src="https://github.com/user-attachments/assets/9d6bafd8-1863-406b-afa3-8e768dae7801" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+<b>Filter for DNS  traffic only</b>
+
+DNS (Domain Name System) is used to translate human-readable domain names (like www.homedepot.com) into IP addresses (like 168.63.129.16) that computers use to identify each other on the network.
+
+1. Back in Wireshark, filter for DNS traffic only.
+
+<p>
+<img src="https://github.com/user-attachments/assets/45c2bdc3-a404-4a57-997c-9ddacf69a45e" height="80%" width="80%" alt="Create VM's"/>
 </p>
+
+2. On your Windows VM, open PowerShell and type <em>nslookup www.homedepot.com</em>. Press <b>Enter</b> and you'll see homedepot.com's IP address
+
+<p>
+<img src="https://github.com/user-attachments/assets/c8265ff8-5f16-4710-9b08-a5da59f24a50" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+<p>
+<img src="https://github.com/user-attachments/assets/5317e41e-4ea0-4944-809d-e6ad45d4ea30" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+3. You will also see DNS traffic between www.homedepot.com and your VM building up, even if your browser is not open.
+
+<p>
+<img src="https://github.com/user-attachments/assets/7095200f-7df7-4ca8-8d46-85352577247d" height="80%" width="80%" alt="Create VM's"/>
+</p>
+
+4. If you copy homedepot.com's IP address, paste it in your browser's address bar and press <b>Enter</b> you will get an error message or the connection will time out. This may be due to many reasons, among them web server configuration.
+
+<p>
+<img src="https://github.com/user-attachments/assets/1f54228f-1d61-4ebf-b846-4bbaa27da445" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+<b>Filter for RDP  traffic only</b>
+
+The last protocol we'll tackle is <b>RDP (Remote Desktop Protocol)</b>. RDP is a Microsoft-developed protocol that allows a user to connect to another computer over a network and control it remotely.
+
+1. Back in Wireshark, filter for RDP traffic only by typing <em>tcp.port==3389</em>. Note that if you type <em>rdp</em> in the filter bar, you will get different results because Wireshark will only show packets that it has specifically identified and dissected as RDP. If you type <em>tcp.port==3389</em> however, this will show all TCP packets where the source or destination port is 3389. RDP traffic almost always runs over <b>TCP (Transmission Control Protocol) port 3389</b>, unless it has been manually changed.
+
+
+<p>
+<img src="https://github.com/user-attachments/assets/e9826105-4eca-4dd1-b36d-b48cd014b818" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
+
+
+
 
 
 
