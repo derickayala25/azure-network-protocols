@@ -416,8 +416,11 @@ The last protocol we'll tackle is <b>RDP (Remote Desktop Protocol)</b>. RDP is a
 <img src="https://github.com/user-attachments/assets/e9826105-4eca-4dd1-b36d-b48cd014b818" height="80%" width="80%" alt="Create VM's"/>
 </p></br>
 
+You will see continuous traffic when you filter by <em>tcp.port==3389</em> because once a remote desktop session is established, it needs to maintain the connection and be ready for any activity.
 
-
+<p>
+<img src="https://github.com/user-attachments/assets/a0a67bbd-1b12-4f99-9b43-ec1974be56d6" height="80%" width="80%" alt="Create VM's"/>
+</p></br>
 
 
 
